@@ -8,5 +8,6 @@ fetch(ff14Url)
         return res.json();
     })
     .then(jsonResult => {
+        
         console.log(jsonResult);
     })
