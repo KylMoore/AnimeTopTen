@@ -1,4 +1,4 @@
-[Live Llink](https://animetopten.netlify.app/)
+[Live Link](https://animetopten.netlify.app/)
 
 <!-- Pseudocode!! -->
 
