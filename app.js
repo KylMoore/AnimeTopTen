@@ -61,7 +61,8 @@ animeTopTen.displayAll = () => {
             scoreEl.textContent = anime.score;
             imgEl.src = anime.images.jpg.image_url;
             imgEl.alt = `poster picture for ${anime.title}`;
-            /* using character limit to ensure synopsis length are similar for each anime.
+            /* 
+            using character limit to ensure synopsis length are similar for each anime.
             technique found from: https://stackoverflow.com/questions/33718245/limit-characters-displayed-in-span
             */
             synopEl.style = `display:inline-block;
