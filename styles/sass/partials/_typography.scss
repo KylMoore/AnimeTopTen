@@ -1,0 +1,55 @@
+@use "./variables" as *;
+
+html {
+    font-size: 125%;
+}
+
+body {
+    font-family: $bodyFont;
+}
+
+h1 {
+    font-family: $h1Font;
+    font-size: 5rem;
+    text-align: center;
+    color: #fff867;
+}
+
+a {
+text-decoration: none;
+}
+
+li {
+    display: flex;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.5rem;
+    height: 2rem;
+
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover,
+    &:focus {
+        text-overflow: inherit;
+        overflow: visible;
+        white-space: normal;
+
+    }
+
+// https: //stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling
+
+    &:hover~h4 {
+        visibility: hidden;
+    }
+}
+
+
+    h4 {
+        color: #fff867;
+        margin-top: 0;
+    }

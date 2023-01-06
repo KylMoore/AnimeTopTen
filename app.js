@@ -34,8 +34,8 @@ animeTopTen.displayAll = () => {
             // console.log(jsonResult);
             animeTopTen.rankTen = jsonResult.data;
             console.log(animeTopTen.rankTen);
-            
-            animeTopTen.rankTen.forEach( (anime) => {
+
+            animeTopTen.rankTen.forEach((anime) => {
                 if (anime.members > 10000 && animeTopTen.filtered.length < 10) {
                     animeTopTen.filtered.push(anime)
                 }
@@ -44,42 +44,48 @@ animeTopTen.displayAll = () => {
             console.log(animeTopTen.filtered);
             animeTopTen.displayAnime();
         })
-    };
-    
-    animeTopTen.displayAnime = () => {
+};
 
-        const ulEl = document.querySelector('.animeGallery');
-        animeTopTen.filtered.forEach( (anime) => {
+animeTopTen.displayAnime = () => {
 
-            const liEl = document.createElement('li');
-            const titleEl = document.createElement('h3');
-            const scoreEl = document.createElement('h4');
-            const imgEl = document.createElement('img');
-            const synopEl = document.createElement('p');
+    const ulEl = document.querySelector('.animeGallery');
+    animeTopTen.filtered.forEach((anime) => {
 
-            titleEl.textContent = anime.title;
-            scoreEl.textContent = anime.score;
-            imgEl.src = anime.images.jpg.image_url;
-            imgEl.alt = `poster picture for ${anime.title}`;
-            /* 
-            using character limit to ensure synopsis length are similar for each anime.
-            technique found from: https://stackoverflow.com/questions/33718245/limit-characters-displayed-in-span
-            */
-            synopEl.style = `display:inline-block;
+        const liEl = document.createElement('li');
+        const aEl = document.createElement('a');
+        const titleEl = document.createElement('h3');
+        const scoreEl = document.createElement('h4');
+        const imgEl = document.createElement('img');
+        const synopEl = document.createElement('p');
+
+        aEl.href = anime.url;
+        titleEl.textContent = anime.title;
+        scoreEl.textContent = anime.score;
+        imgEl.src = anime.images.jpg.image_url;
+        imgEl.alt = `poster picture for ${anime.title}`;
+        /* 
+        using character limit to ensure synopsis length are similar for each anime.
+        technique found from: https://stackoverflow.com/questions/33718245/limit-characters-displayed-in-span
+        */
+        synopEl.style = `display:inline-block;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 max-width: 300ch;`
-            synopEl.textContent = anime.synopsis;
-
-            liEl.appendChild(titleEl);
-            liEl.appendChild(scoreEl);
-            liEl.appendChild(imgEl);
-            liEl.appendChild(synopEl);
-
-            ulEl.appendChild(liEl)
-        });
-    };
+        synopEl.textContent = anime.synopsis;
 
 
-    animeTopTen.init();
+        liEl.appendChild(titleEl);
+        liEl.appendChild(scoreEl); 
+        liEl.appendChild(aEl);
+        aEl.appendChild(imgEl);
+        liEl.appendChild(synopEl);
+
+        console.log(aEl);
+
+        ulEl.appendChild(liEl)
+    });
+};
+
+
+animeTopTen.init();
