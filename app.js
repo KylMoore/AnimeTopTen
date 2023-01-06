@@ -1,7 +1,9 @@
-const ff14Url = new URL('https://api.jikan.moe/v4/anime?start_date=2022&rating=g');
+const url = new URL('https://api.jikan.moe/v4/anime?start_date=2022&rating=g');
 /* to make query */
 
-fetch(ff14Url)
+
+
+fetch(url)
     // .then(res => res.json())
     .then(res => {
         // console.log(res)
