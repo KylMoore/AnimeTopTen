@@ -69,7 +69,7 @@ animeTopTen.displayAll = () => {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                max-width: 100ch;`
+                max-width: 300ch;`
             synopEl.textContent = anime.synopsis;
 
             liEl.appendChild(titleEl);
