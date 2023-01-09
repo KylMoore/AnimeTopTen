@@ -1,13 +1,35 @@
+@use 'variables' as *;
+
 html {
-    background-color: #5a5b6d;
+    background-color: $grey;
 }
 
 body {
-    color: #ffffff;
+    color: $white;
 }
 
 .wrapper {
     max-width: 1440px;
     width: 90%;
     margin: 0 auto;
+}
+
+footer {
+
+    display: flex;
+    flex-direction: row;
+    background-color: $blue;
+    
+
+}
+
+footer p {
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+        display: inline-block;
+        color:$white;
+        text-decoration: underline;
+    }
 }
