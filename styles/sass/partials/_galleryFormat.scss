@@ -21,7 +21,9 @@ li {
     display: flex;
     padding: 2.5%;
     margin: 5% 0;
-    
+    flex-basis: 50%;
+
+
     max-width: 40%;
     list-style: none;
     flex-direction: column;
