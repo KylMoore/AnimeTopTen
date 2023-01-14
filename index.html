@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="./styles/styles.css">
 	<title>Anime Search Ten</title>
 </head>
@@ -34,13 +35,42 @@
 
 
 
+		<!-- Nav Start -->
+
+		<nav>
+			<form action="select">
+				<label for="year">Year:</label>
+				<select name="year" id="year">
+					<option label="All time" value="all-Time">All-Time</option>
+					<option label="2021 to present" value="time-2021-Present">2021-Present</option>
+					<option label="2011 to 2020" value="time-2011-2020">2011-2020</option>
+					<option label="2001 to 2010" value="time-2001-2010">2001-2010</option>
+				</select>
+				
+				<label for="genre">Genre:</label>
+				<select name="genre" id="genre">
+					<option label="All" selected="true" value="" class="selection"></option>
+					<option label="Action" value="1" class="selection"></option>
+					<option label="Adventure" value="2" class="selection"></option>
+					<option label="Comedy" value="4" class="selection"></option>
+					<option label="Fantasy" value="10" class="selection"></option>
+					<option label="Romance" value="22" class="selection"></option>
+				</select>
+
+				<button id="search" class="search" type="submit">Search</button>
+			</form>
+		</nav>
+
+		<!-- Nav End -->
+
+
 
 		<!-- Section Start -->
 
 		<section class="userChoices">
 			<div class="gallery">
 				<ul class="animeGallery">
-				
+
 				</ul>
 			</div>
 		</section>
@@ -53,16 +83,24 @@
 	<!-- Page Content End -->
 
 
-	
+
 
 	<!-- Footer Section Start -->
 
 	<footer>
 
 		<div class="wrapper">
-			<p>Created By Jimmy and Kyle</p>
+			<!-- <p>Created By Jimmy and Kyle.</p>
 			<p>Made By Using Jikan API, MyAnimeList</p>
-			<p>Juno College 2022</p>
+			<p>Juno College 2022</p> -->
+
+			<p>
+				<span>Created By Jimmy and Kyle</span>
+				<span>Juno College 2022</span>
+				<!-- <span>Made By Using Jikan API, MyAnimeList</span> -->
+			</p>
+			<p><span>Made By Using
+					<a href="">Jikan API</a>, <a href="">MyAnimeList</a></span></p>
 		</div>
 
 	</footer>
