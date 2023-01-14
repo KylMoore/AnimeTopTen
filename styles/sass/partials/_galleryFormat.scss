@@ -1,3 +1,4 @@
+@use 'variables' as *;
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -8,41 +9,56 @@ ul {
 
 a {
     align-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 li {
-    // border: #fff867  solid 1px;
     transition: .4s;
     display: flex;
     padding: 2.5%;
     margin: 5% 0;
     
     max-width: 40%;
-    // flex-basis: 50%;
     list-style: none;
     flex-direction: column;
-    // align-items: center;
 
     &:hover,
     &:focus {
-        background-color: #2c52b3;
+        background-color: $blue;
     }
+}
+
+a p {
+    position: absolute;
+    top: 40%;
+    color: $white;
+    display: none;
+    transition: 0.4s;
+}
+
+.text {
+    display: flex;
+    overflow: hidden;
+    
 }
 
 img {
     display: flex;
     align-items: center;
-
-    // padding: 5%;
-    // width: 90%;
-    // transition: .3s;
-    // display: block;
+    transition: 0.4s;
 
     &:hover,
     &:focus {
-        // width: 100%;
-        // padding: 0;
+        filter: brightness(40%);
     }
+    &:hover ~ p,
+    &:focus ~ p {
+        display: flex;
+    } 
 }
 
 p {
