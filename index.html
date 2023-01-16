@@ -28,25 +28,32 @@
 		<!-- Nav Start -->
 		<nav>
 			<form action="select">
-				<label for="year">Year:</label>
-				<select name="year" id="year" class="year">
-					<option label="All time" value="all-Time">All-Time</option>
-					<option label="2021 to present" value="time-2021-Present">2021-Present</option>
-					<option label="2011 to 2020" value="time-2011-2020">2011-2020</option>
-					<option label="2001 to 2010" value="time-2001-2010">2001-2010</option>
-				</select>
-				
-				<label for="genre">Genre:</label>
-				<select name="genre" id="genre" class="genre">
-					<option label="All" selected="true" value="" class="selection"></option>
-					<option label="Action" value="1" class="selection"></option>
-					<option label="Adventure" value="2" class="selection"></option>
-					<option label="Comedy" value="4" class="selection"></option>
-					<option label="Fantasy" value="10" class="selection"></option>
-					<option label="Romance" value="22" class="selection"></option>
-				</select>
 
-				<button id="search" class="search" type="submit">Search</button>
+				<div class="yearContainer">
+					<label for="year">Year:</label>
+					<select name="year" id="year" class="year">
+						<option label="All time" value="all-Time">All-Time</option>
+						<option label="2021 to present" value="time-2021-Present">2021-Present</option>
+						<option label="2011 to 2020" value="time-2011-2020">2011-2020</option>
+						<option label="2001 to 2010" value="time-2001-2010">2001-2010</option>
+					</select>
+				</div>
+				
+				<div class="genreContainer">
+					<label for="genre">Genre:</label>
+					<select name="genre" id="genre" class="genre">
+						<option label="All" selected="true" value="" class="selection"></option>
+						<option label="Action" value="1" class="selection"></option>
+						<option label="Adventure" value="2" class="selection"></option>
+						<option label="Comedy" value="4" class="selection"></option>
+						<option label="Fantasy" value="10" class="selection"></option>
+						<option label="Romance" value="22" class="selection"></option>
+					</select>
+				</div>
+
+				<div class="buttonContainer">
+					<button id="search" class="search" type="submit">Search</button>
+				</div> 
 			</form>
 		</nav>
 		<!-- Nav End -->
@@ -66,15 +73,13 @@
 	<footer>
 		<div class="wrapper">
 			<p>
-				<span>Created By Jimmy and Kyle</span>
-				<span>Juno College 2022</span>
+				Created By Jimmy and Kyle at Juno College 2022
 			</p>
-			<p><span>
-					Made By Using
-					<a href="https://docs.api.jikan.moe/">Jikan API</a>, 
-					<a href="https://myanimelist.net/">MyAnimeList</a>
-				</span>
-			</p>
+			<div class="footerLinkContainer">
+				<p>Made by Using:</p>
+				<a href="https://docs.api.jikan.moe/">Jikan API</a>
+				<a href="https://myanimelist.net/">MyAnimeList</a>
+			</div>
 		</div>
 	</footer>
 	<!-- Footer Section End -->
