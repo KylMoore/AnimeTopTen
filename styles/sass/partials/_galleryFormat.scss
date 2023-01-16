@@ -1,4 +1,5 @@
 @use 'variables' as *;
+
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -13,18 +14,14 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    width: 100%;
 }
 
 li {
-    transition: .4s;
     display: flex;
+    transition: .4s;
     padding: 2.5%;
-    margin: 5% 0;
-    flex-basis: 50%;
-
-
-    max-width: 40%;
+    width: 40%;
     list-style: none;
     flex-direction: column;
 
@@ -37,32 +34,32 @@ li {
 a p {
     position: absolute;
     top: 40%;
-    color: $white;
-    display: none;
-    transition: 0.4s;
+    //transparent color to show unhindered image unless hover/focused
+    color: transparent;
+    display: flex;
+    transition: color 0.4s;
+    font-size: 1.5rem;
+    width: 90%;
 }
 
 .text {
     display: flex;
     overflow: hidden;
-    
 }
 
 img {
     display: flex;
     align-items: center;
     transition: 0.4s;
+    width: 100%;
 
     &:hover,
     &:focus {
-        filter: brightness(40%);
+        filter: brightness(30%);
     }
+    
     &:hover ~ p,
     &:focus ~ p {
-        display: flex;
+        color: $white;
     } 
-}
-
-p {
-    // margin: 0;
 }
