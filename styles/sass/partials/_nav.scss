@@ -35,17 +35,25 @@ label {
 }
 
 select {
-    padding: .5rem;
+    padding: 0 1.5rem;
     margin: 0 1rem;
     border: none;
     color: white;
+    border-bottom: 1px solid $grey;
+    transition: border-bottom 0.3s;
+
+    &:hover,
+    &:focus {
+        border-bottom: 1px solid $yellow;
+    }
 }
 
 button {
     color: $white;
     border: none;
-    transition: 0.3s;
-    padding: 0 1rem;
+    transition: border-bottom 0.3s;
+    margin-left: 0.5rem;
+    padding: 0 1.5rem;
     border-bottom: 1px solid $blue;
 
     &:hover,
@@ -59,3 +67,4 @@ button {
     background-color: $grey;
     font-family: $bodyFont;
 }
+

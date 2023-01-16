@@ -15,32 +15,21 @@
 
 <body>
 
-	<!--  -->
-
 	<!-- Page Content Start -->
-
 	<div class="wrapper">
-
-
-
 		<!-- Header Start -->
-
 		<header>
 			<h1>
 				Anime Top Ten!
 			</h1>
 		</header>
-
 		<!-- Header End -->
 
-
-
 		<!-- Nav Start -->
-
 		<nav>
 			<form action="select">
 				<label for="year">Year:</label>
-				<select name="year" id="year">
+				<select name="year" id="year" class="year">
 					<option label="All time" value="all-Time">All-Time</option>
 					<option label="2021 to present" value="time-2021-Present">2021-Present</option>
 					<option label="2011 to 2020" value="time-2011-2020">2011-2020</option>
@@ -48,7 +37,7 @@
 				</select>
 				
 				<label for="genre">Genre:</label>
-				<select name="genre" id="genre">
+				<select name="genre" id="genre" class="genre">
 					<option label="All" selected="true" value="" class="selection"></option>
 					<option label="Action" value="1" class="selection"></option>
 					<option label="Adventure" value="2" class="selection"></option>
@@ -60,60 +49,38 @@
 				<button id="search" class="search" type="submit">Search</button>
 			</form>
 		</nav>
-
 		<!-- Nav End -->
 
-
-
 		<!-- Section Start -->
-
 		<section class="userChoices">
 			<div class="gallery">
 				<ul class="animeGallery">
-
 				</ul>
 			</div>
 		</section>
-
 		<!-- Section End -->
-
-
 	</div>
-
 	<!-- Page Content End -->
 
-
-
-
 	<!-- Footer Section Start -->
-
 	<footer>
-
 		<div class="wrapper">
-			<!-- <p>Created By Jimmy and Kyle.</p>
-			<p>Made By Using Jikan API, MyAnimeList</p>
-			<p>Juno College 2022</p> -->
-
 			<p>
 				<span>Created By Jimmy and Kyle</span>
 				<span>Juno College 2022</span>
-				<!-- <span>Made By Using Jikan API, MyAnimeList</span> -->
 			</p>
-			<p><span>Made By Using
-					<a href="">Jikan API</a>, <a href="">MyAnimeList</a></span></p>
+			<p><span>
+					Made By Using
+					<a href="https://docs.api.jikan.moe/">Jikan API</a>, 
+					<a href="https://myanimelist.net/">MyAnimeList</a>
+				</span>
+			</p>
 		</div>
-
 	</footer>
-
 	<!-- Footer Section End -->
 
-
-
 	<!-- JavaScript Link -->
-
 	<script src="./app.js"></script>
-
-
 </body>
 
 </html>

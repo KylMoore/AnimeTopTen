@@ -13,6 +13,7 @@ h1 {
     font-size: 5rem;
     text-align: center;
     color: $yellow;
+    margin: 5% 0;
 }
 
 a {
@@ -22,12 +23,13 @@ text-decoration: none;
 li {
     display: flex;
     color: $white;
+    margin: 0;
 }
 
 h3 {
     font-size: 1.5rem;
     height: 2rem;
-
+    margin-top: 0;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -41,13 +43,11 @@ h3 {
 
     }
 
-// https: //stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling
-
-    &:hover~h4 {
+    // https: //stackoverflow.com/questions/6910049/on-a-css-hover-event-can-i-change-another-divs-styling
+    &:hover ~ h4 {
         visibility: hidden;
     }
 }
-
 
     h4 {
         color: $yellow;
