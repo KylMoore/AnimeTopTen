@@ -215,6 +215,7 @@ h1 {
   font-size: 5rem;
   text-align: center;
   color: #fff867;
+  margin: 5% 0;
 }
 
 a {
@@ -226,11 +227,13 @@ li {
   display: -ms-flexbox;
   display: flex;
   color: #ffffff;
+  margin: 0;
 }
 
 h3 {
   font-size: 1.5rem;
   height: 2rem;
+  margin-top: 0;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -334,18 +337,25 @@ label {
 }
 
 select {
-  padding: 0.5rem;
+  padding: 0 1.5rem;
   margin: 0 1rem;
   border: none;
   color: white;
+  border-bottom: 1px solid #5a5b6d;
+  -webkit-transition: border-bottom 0.3s;
+  transition: border-bottom 0.3s;
+}
+select:hover, select:focus {
+  border-bottom: 1px solid #fff867;
 }
 
 button {
   color: #ffffff;
   border: none;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  padding: 0 1rem;
+  -webkit-transition: border-bottom 0.3s;
+  transition: border-bottom 0.3s;
+  margin-left: 0.5rem;
+  padding: 0 1.5rem;
   border-bottom: 1px solid #2c52b3;
 }
 button:hover, button:focus {
@@ -383,19 +393,17 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 li {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   padding: 2.5%;
-  margin: 5% 0;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
-  max-width: 40%;
+  width: 40%;
   list-style: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -409,10 +417,14 @@ li:hover, li:focus {
 a p {
   position: absolute;
   top: 40%;
-  color: #ffffff;
-  display: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+  font-size: 1.5rem;
+  width: 90%;
 }
 
 .text {
@@ -431,13 +443,12 @@ img {
           align-items: center;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  width: 100%;
 }
 img:hover, img:focus {
-  -webkit-filter: brightness(40%);
-          filter: brightness(40%);
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
 }
 img:hover ~ p, img:focus ~ p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  color: #ffffff;
 }
