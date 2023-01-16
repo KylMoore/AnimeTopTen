@@ -34,12 +34,11 @@ li {
 a p {
     position: absolute;
     top: 40%;
-    //transparent color to show unhindered image unless hover/focused
-    color: transparent;
-    display: flex;
+    display: none;
     transition: color 0.4s;
     font-size: 1.5rem;
     width: 90%;
+    color: $white;
 }
 
 .text {
@@ -60,6 +59,6 @@ img {
     
     &:hover ~ p,
     &:focus ~ p {
-        color: $white;
+        display: flex;
     } 
 }

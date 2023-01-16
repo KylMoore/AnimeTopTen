@@ -417,14 +417,12 @@ li:hover, li:focus {
 a p {
   position: absolute;
   top: 40%;
-  color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
   font-size: 1.5rem;
   width: 90%;
+  color: #ffffff;
 }
 
 .text {
@@ -450,5 +448,7 @@ img:hover, img:focus {
           filter: brightness(30%);
 }
 img:hover ~ p, img:focus ~ p {
-  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
