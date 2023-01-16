@@ -1,3 +1,86 @@
+@use "variables" as *;
 
+@media (max-width: 800px) {
+    form {
+        justify-content: space-between;
+    }
+}
 
-// adjust title and score to center on higher pixel width
+@media (max-width: 600px) {
+    h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    nav{
+        border-bottom: 0px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .yearContainer,
+    .genreContainer {
+        justify-content: space-between;
+    }
+
+    select {
+        margin-right: 0;
+    }
+
+    button {
+        padding: 0.25rem 1rem;
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    .buttonContainer {
+        justify-content: right;
+    }
+
+    li {
+        margin: 0.25rem auto;
+        padding: 2rem 0;
+        width: 90%;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .text {
+        display: none;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}

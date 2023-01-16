@@ -83,7 +83,8 @@ animeTopTen.displayAnime = () => {
         scoreEl.textContent = anime.score;
         imgEl.src = anime.images.jpg.image_url;
         imgEl.alt = `poster picture for ${anime.title}`;
-        linkEl.textContent = `Click to go MyAnimeList for more detail`
+        linkEl.textContent = `Click to go to MyAnimeList.net`
+        linkEl.classList.add('linkText')
         themeEl.classList.add('text')
 
         let themeTags = '';

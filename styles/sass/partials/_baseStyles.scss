@@ -18,15 +18,32 @@ footer {
     display: flex;
     flex-direction: row;
     background-color: $blue;
+    padding: 0.5rem 0;
+
 }
 
 footer p {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.footerLinkContainer {
+    display: flex;
+    justify-content: center;
+
+    p {
+        display: flex;
+        margin: 0;
+        width: auto;
+    }
 
     a {
-        display: inline-block;
+        display: flex;
         color:$white;
         text-decoration: underline;
+        width: auto;
+        padding-left: 1rem;
     }
+
 }

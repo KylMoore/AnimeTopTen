@@ -20,10 +20,12 @@ a {
 li {
     display: flex;
     transition: .4s;
-    padding: 2.5%;
+    padding: 1rem;
     width: 40%;
     list-style: none;
     flex-direction: column;
+    margin-bottom: 1rem;
+    // background-color: $blue;
 
     &:hover,
     &:focus {
@@ -31,7 +33,7 @@ li {
     }
 }
 
-a p {
+.linkText {
     position: absolute;
     top: 40%;
     display: none;
@@ -39,12 +41,15 @@ a p {
     font-size: 1.5rem;
     width: 90%;
     color: $white;
+    text-align: center;
 }
 
 .text {
     display: flex;
     overflow: hidden;
 }
+
+
 
 img {
     display: flex;

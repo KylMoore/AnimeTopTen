@@ -276,20 +276,42 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row;
   background-color: #2c52b3;
+  padding: 0.5rem 0;
 }
 
 footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
 }
-footer p a {
-  display: inline-block;
+
+.footerLinkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footerLinkContainer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  width: auto;
+}
+.footerLinkContainer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #ffffff;
   text-decoration: underline;
+  width: auto;
+  padding-left: 1rem;
 }
 
 nav {
@@ -309,13 +331,33 @@ form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -ms-flex-line-pack: center;
       align-content: center;
   font-family: "Comic Neue", sans-serif;
-  margin: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.yearContainer,
+.genreContainer,
+.buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 1rem;
 }
 
 option {
@@ -355,7 +397,7 @@ button {
   -webkit-transition: border-bottom 0.3s;
   transition: border-bottom 0.3s;
   margin-left: 0.5rem;
-  padding: 0 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-bottom: 1px solid #2c52b3;
 }
 button:hover, button:focus {
@@ -402,19 +444,20 @@ li {
   display: flex;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  padding: 2.5%;
+  padding: 1rem;
   width: 40%;
   list-style: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1rem;
 }
 li:hover, li:focus {
   background-color: #2c52b3;
 }
 
-a p {
+.linkText {
   position: absolute;
   top: 40%;
   display: none;
@@ -423,6 +466,7 @@ a p {
   font-size: 1.5rem;
   width: 90%;
   color: #ffffff;
+  text-align: center;
 }
 
 .text {
@@ -451,4 +495,81 @@ img:hover ~ p, img:focus ~ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 800px) {
+  form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    border-bottom: 0px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .yearContainer,
+.genreContainer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  select {
+    margin-right: 0;
+  }
+  button {
+    padding: 0.25rem 1rem;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  .buttonContainer {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  li {
+    margin: 0.25rem auto;
+    padding: 2rem 0;
+    width: 90%;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  .text {
+    display: none;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 360px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+  button {
+    padding: 0 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
 }

@@ -2,6 +2,7 @@
 
 nav {
     display: flex;
+
     justify-content: center;
     align-content: center;
     border-bottom: solid 1px $white;
@@ -10,10 +11,21 @@ nav {
 
 form {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
     font-family: $bodyFont;
-    margin: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.yearContainer,
+.genreContainer,
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
 }
 
 option {
@@ -53,7 +65,7 @@ button {
     border: none;
     transition: border-bottom 0.3s;
     margin-left: 0.5rem;
-    padding: 0 1.5rem;
+    padding: 0.5rem 1.5rem;
     border-bottom: 1px solid $blue;
 
     &:hover,
